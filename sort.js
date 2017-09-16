@@ -7,7 +7,6 @@ var selectionData = [];
 
 
 
-var gnomeIndex = 0;
 
 function initDescendingTest()
 {
@@ -73,6 +72,7 @@ function pauseSorts()
 	}
 }
 
+var gnomeIndex = 0;
 
 function gnomeStep(data, i)
 {
