@@ -154,9 +154,16 @@ function stepAlgorithms()
 	{
 		if(!isSorted(gnomeData))
 		{
-			gnomeIndex = gnomeStep(gnomeData, gnomeIndex);
-			updateGnomeGraph();
-			step = false;
+			gnomeStep();
 		}
+		
+		if(!isSorted(selectionData))
+		{
+			selectionStep();
+		}
+
+		
+		updateGraphs();
+		step = false;
 	}
 }
