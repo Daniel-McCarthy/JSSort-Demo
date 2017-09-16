@@ -50,7 +50,12 @@ function clearGraphs()
 	
 	gnomeContext.fillStyle = "white";
 	gnomeContext.fillRect(0, 0, 100, 256);
+	
+	var selectionContext = document.getElementById("selectionGraph").getContext("2d");
 
+	selectionContext.fillStyle = "white";
+	selectionContext.fillRect(0, 0, 100, 256);
+	
 }
 
 function updateGnomeGraph()
