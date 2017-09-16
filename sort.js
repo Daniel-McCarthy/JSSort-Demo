@@ -4,6 +4,7 @@ var step = false;
 var descendingTest = [];
 var gnomeData = [];
 var selectionData = [];
+var insertionData = [];
 
 
 
@@ -26,6 +27,7 @@ function startSorts()
 	initDescendingTest();
 	gnomeData = descendingTest.slice();
 	selectionData = descendingTest.slice();
+	insertionData = descendingTest.slice();
 	
 	//Init Gnome
 	gnomeIndex = 0;
@@ -189,6 +191,7 @@ function startTimer()
 	initDescendingTest();
 	gnomeData = descendingTest.slice();
 	selectionData = descendingTest.slice();
+	insertionData = descendingTest.slice();
 	
 	setInterval(stepAlgorithms, 1);
 }
