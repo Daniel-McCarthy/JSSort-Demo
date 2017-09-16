@@ -98,21 +98,24 @@ function pauseSorts()
 
 var gnomeIndex = 0;
 
-function gnomeStep(data, i)
+function gnomeStep()
 {
 	var c = 0;
 	
-	if((i == 0) || (data[i]) >= data[i - 1])
+	if((gnomeIndex == 0) || (gnomeData[gnomeIndex]) >= gnomeData[gnomeIndex - 1])
 	{
-		i++;
+		gnomeIndex++;
 	}
 	else
 	{
-		c = data[i];
-		data[i] = data[i - 1];
-		data[i - 1] = c;
-		i--;
+		c = gnomeData[gnomeIndex];
+		gnomeData[gnomeIndex] = gnomeData[gnomeIndex - 1];
+		gnomeData[gnomeIndex - 1] = c;
+		gnomeIndex--;
 	}
+
+}
+
 	
 	return i;
 }
