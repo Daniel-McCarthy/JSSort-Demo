@@ -116,8 +116,53 @@ function gnomeStep()
 
 }
 
+var closestValue = 0;
+var closestIndex = 0;
+var selectionIndex = 0;
+var selectionSecondIndex = 0;
+var selectionSwapNeeded = false;
+
+function selectionStep()
+{
+	var c = 0;
 	
-	return i;
+	if(selectionIndex == 0 && selectionSecondIndex == 0)
+	{
+
+		closestValue = selectionData[selectionIndex];
+		closestIndex = selectionIndex;
+	}
+	
+	if((selectionSecondIndex + 1) < selectionData.length)
+	{
+		if(selectionData[selectionSecondIndex] < closestValue)
+		{
+			closestValue = selectionData[selectionSecondIndex];
+			closestIndex = selectionSecondIndex;
+			selectionSwapNeeded = true;
+		}
+		selectionSecondIndex++;
+	}
+	else
+	{
+		if(selectionSwapNeeded)
+		{
+			c = selectionData[selectionIndex];
+			selectionData[selectionIndex] = selectionData[closestIndex];
+			selectionData[closestIndex] = c;
+		}
+		
+		selectionSwapNeeded = false;
+	
+		selectionIndex++;
+		selectionSecondIndex = selectionIndex + 1;
+		
+		closestValue = selectionData[selectionIndex];
+		closestIndex = selectionIndex;
+
+	}
+
+	
 }
 
 function sleep() {}
