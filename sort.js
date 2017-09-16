@@ -63,6 +63,12 @@ function clearGraphs()
 	selectionContext.fillStyle = "white";
 	selectionContext.fillRect(0, 0, 100, 256);
 	
+	var insertionContext = document.getElementById("insertionGraph").getContext("2d");
+
+	insertionContext.fillStyle = "white";
+	insertionContext.fillRect(0, 0, 100, 256);
+	
+	
 }
 
 function updateGraphs()
