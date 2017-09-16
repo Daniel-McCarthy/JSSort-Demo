@@ -227,6 +227,11 @@ function stepAlgorithms()
 		{
 			selectionStep();
 		}
+		
+		if(!isSorted(insertionData))
+		{
+			insertionStep();
+		}
 
 		
 		updateGraphs();
