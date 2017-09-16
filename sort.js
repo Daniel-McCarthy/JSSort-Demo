@@ -143,6 +143,8 @@ function startTimer()
 	clearGraphs();
 	initDescendingTest();
 	gnomeData = descendingTest.slice();
+	selectionData = descendingTest.slice();
+	
 	setInterval(stepAlgorithms, 1);
 }
 
