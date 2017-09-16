@@ -75,6 +75,7 @@ function updateGraphs()
 {
 	var gnomeContext = document.getElementById("gnomeGraph").getContext("2d");
 	var selectionContext = document.getElementById("selectionGraph").getContext("2d");
+	var insertionContext = document.getElementById("insertionGraph").getContext("2d");
 	clearGraphs();
 	
 	for(var i = 0; i < gnomeData.length; i++)
@@ -87,6 +88,12 @@ function updateGraphs()
 	{
 		selectionContext.fillStyle = "black";
 		selectionContext.fillRect(i, (256)-selectionData[i], 1, 1);
+	}
+	
+	for(var i = 0; i < insertionData.length; i++)
+	{
+		insertionContext.fillStyle = "black";
+		insertionContext.fillRect(i, (256)-insertionData[i], 1, 1);
 	}
 }
 
