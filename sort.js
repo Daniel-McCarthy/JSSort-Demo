@@ -58,15 +58,22 @@ function clearGraphs()
 	
 }
 
-function updateGnomeGraph()
+function updateGraphs()
 {
 	var gnomeContext = document.getElementById("gnomeGraph").getContext("2d");
+	var selectionContext = document.getElementById("selectionGraph").getContext("2d");
 	clearGraphs();
 	
 	for(var i = 0; i < gnomeData.length; i++)
 	{
 		gnomeContext.fillStyle = "black";
 		gnomeContext.fillRect(i, (256)-gnomeData[i], 1, 1);
+	}
+	
+	for(var i = 0; i < selectionData.length; i++)
+	{
+		selectionContext.fillStyle = "black";
+		selectionContext.fillRect(i, (256)-selectionData[i], 1, 1);
 	}
 }
 
