@@ -25,6 +25,18 @@ function startSorts()
 	clearGraphs();
 	initDescendingTest();
 	gnomeData = descendingTest.slice();
+	selectionData = descendingTest.slice();
+	
+	//Init Gnome
+	gnomeIndex = 0;
+	
+	//Init Selection
+	closestValue = 0;
+	closestIndex = 0;
+	selectionIndex = 0;
+	selectionSecondIndex = 0;
+	selectionSwapNeeded = false;
+	
 	
 	(paused)
 	{
