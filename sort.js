@@ -39,15 +39,15 @@ function clearGraphs()
 
 }
 
-function updateGnomeGraph(data)
+function updateGnomeGraph()
 {
 	var gnomeContext = document.getElementById("gnomeGraph").getContext("2d");
 	clearGraphs();
 	
-	for(var i = 0; i < data.length; i++)
+	for(var i = 0; i < gnomeData.length; i++)
 	{
 		gnomeContext.fillStyle = "black";
-		gnomeContext.fillRect(i, (256)-data[i], 1, 1);
+		gnomeContext.fillRect(i, (256)-gnomeData[i], 1, 1);
 	}
 }
 
@@ -123,7 +123,7 @@ function stepAlgorithms()
 		if(!isSorted(gnomeData))
 		{
 			gnomeIndex = gnomeStep(gnomeData, gnomeIndex);
-			updateGnomeGraph(gnomeData);
+			updateGnomeGraph();
 			step = false;
 		}
 	}
