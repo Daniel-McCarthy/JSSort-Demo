@@ -3,6 +3,9 @@ var step = false;
 
 var descendingTest = [];
 var gnomeData = [];
+var selectionData = [];
+
+
 
 var gnomeIndex = 0;
 
