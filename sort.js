@@ -39,6 +39,11 @@ function startSorts()
 	selectionSecondIndex = 0;
 	selectionSwapNeeded = false;
 	
+	//Init Insertion
+	insertionIndex = 1;
+    insertionSecondIndex = 0;
+    insertionSwapNeeded = false;
+	insertionFirstRun = true;
 	
 	(paused)
 	{
