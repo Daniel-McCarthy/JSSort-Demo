@@ -185,6 +185,47 @@ function selectionStep()
 	
 }
 
+var insertionIndex = 1;
+var insertionSecondIndex = 0;
+var insertionSwapNeeded = false;
+var insertionFirstRun = true;
+
+function insertionStep()
+{
+	var c = 0;
+	
+	if(insertionFirstRun)
+	{
+		insertionSwapNeeded = insertionData[insertionIndex] < insertionData[insertionIndex - 1];
+		insertionSecondIndex = insertionIndex;
+		insertionFirstRun = false;
+	}
+	
+	if(insertionSwapNeeded)
+	{
+		c = insertionData[insertionSecondIndex - 1];
+		insertionData[insertionSecondIndex - 1] = insertionData[insertionSecondIndex];
+		insertionData[insertionSecondIndex] = c;
+		
+		insertionSecondIndex--;
+		
+		if(insertionSecondIndex > 0)
+		{
+			insertionSwapNeeded = insertionData[insertionSecondIndex] < insertionData[insertionSecondIndex - 1];
+		}
+		else
+		{
+			insertionSwapNeeded = false;
+		}
+	}
+	else
+	{
+		insertionIndex++;
+		insertionSwapNeeded = insertionData[insertionIndex] < insertionData[insertionIndex - 1];
+		insertionSecondIndex = insertionIndex;
+	}
+}
+
 function sleep() {}
 
 function isSorted(data)
