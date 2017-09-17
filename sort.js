@@ -70,6 +70,11 @@ function clearGraphs()
 	insertionContext.fillStyle = "white";
 	insertionContext.fillRect(0, 0, 100, 256);
 	
+	var bubbleContext = document.getElementById("bubbleGraph").getContext("2d");
+
+	bubbleContext.fillStyle = "white";
+	bubbleContext.fillRect(0, 0, 100, 256);
+	
 	
 }
 
