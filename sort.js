@@ -47,6 +47,10 @@ function startSorts()
     insertionSwapNeeded = false;
 	insertionFirstRun = true;
 	
+	//Init Bucket
+	bubbleIndex = 1;
+
+	
 	(paused)
 	{
 		pauseSorts();
