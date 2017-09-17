@@ -96,22 +96,22 @@ function clearGraphs()
 	var gnomeContext = document.getElementById("gnomeGraph").getContext("2d");
 	
 	gnomeContext.fillStyle = "white";
-	gnomeContext.fillRect(0, 0, 100, 256);
+	gnomeContext.fillRect(0, 0, 100*2, 256*2);
 	
 	var selectionContext = document.getElementById("selectionGraph").getContext("2d");
 
 	selectionContext.fillStyle = "white";
-	selectionContext.fillRect(0, 0, 100, 256);
+	selectionContext.fillRect(0, 0, 100*2, 256*2);
 	
 	var insertionContext = document.getElementById("insertionGraph").getContext("2d");
 
 	insertionContext.fillStyle = "white";
-	insertionContext.fillRect(0, 0, 100, 256);
+	insertionContext.fillRect(0, 0, 100*2, 256*2);
 	
 	var bubbleContext = document.getElementById("bubbleGraph").getContext("2d");
 
 	bubbleContext.fillStyle = "white";
-	bubbleContext.fillRect(0, 0, 100, 256);
+	bubbleContext.fillRect(0, 0, 100*2, 256*2);
 	
 	
 }
@@ -127,25 +127,25 @@ function updateGraphs()
 	for(var i = 0; i < gnomeData.length; i++)
 	{
 		gnomeContext.fillStyle = "black";
-		gnomeContext.fillRect(i, (256)-gnomeData[i], 1, 1);
+		gnomeContext.fillRect(i*2, (256*2)-(gnomeData[i]*2), 1*2, 1*2);
 	}
 	
 	for(var i = 0; i < selectionData.length; i++)
 	{
 		selectionContext.fillStyle = "black";
-		selectionContext.fillRect(i, (256)-selectionData[i], 1, 1);
+		selectionContext.fillRect(i*2, (256*2)-(selectionData[i]*2), 1*2, 1*2);
 	}
 	
 	for(var i = 0; i < insertionData.length; i++)
 	{
 		insertionContext.fillStyle = "black";
-		insertionContext.fillRect(i, (256)-insertionData[i], 1, 1);
+		insertionContext.fillRect(i*2, (256*2)-(insertionData[i]*2), 1*2, 1*2);
 	}
 	
 	for(var i = 0; i < bubbleData.length; i++)
 	{
 		bubbleContext.fillStyle = "black";
-		bubbleContext.fillRect(i, (256)-bubbleData[i], 1, 1);
+		bubbleContext.fillRect(i*2, (256*2)-(bubbleData[i]*2), 1*2, 1*2);
 	}
 }
 
