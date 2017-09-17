@@ -48,10 +48,22 @@ function startSorts()
 	}
 	clearGraphs();
 	initDescendingTest();
-	gnomeData = descendingTest.slice();
-	selectionData = descendingTest.slice();
-	insertionData = descendingTest.slice();
-	bubbleData = descendingTest.slice();
+	
+	if(!isRandomTestType)
+	{
+		gnomeData = descendingTest.slice();
+		selectionData = descendingTest.slice();
+		insertionData = descendingTest.slice();
+		bubbleData = descendingTest.slice();
+	}
+	else
+	{
+		gnomeData = randomTest.slice();
+		selectionData = randomTest.slice();
+		insertionData = randomTest.slice();
+		bubbleData = randomTest.slice();
+
+	}
 	
 	//Init Gnome
 	gnomeIndex = 0;
@@ -310,12 +322,23 @@ function startTimer()
 	
 	clearGraphs();
 	initDescendingTest();
-	gnomeData = descendingTest.slice();
-	selectionData = descendingTest.slice();
-	insertionData = descendingTest.slice();
-	bubbleData = descendingTest.slice();
 	
-	setInterval(stepAlgorithms, 1);
+	if(!isRandomTestType)
+	{
+		gnomeData = descendingTest.slice();
+		selectionData = descendingTest.slice();
+		insertionData = descendingTest.slice();
+		bubbleData = descendingTest.slice();
+	}
+	else
+	{
+		gnomeData = randomTest.slice();
+		selectionData = randomTest.slice();
+		insertionData = randomTest.slice();
+		bubbleData = randomTest.slice();
+	}
+	
+	setInterval(stepAlgorithms, 0);
 }
 
 function stepAlgorithms()
