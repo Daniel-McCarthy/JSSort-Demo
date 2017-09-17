@@ -89,7 +89,7 @@ function startSorts()
 	//Init Comb
 	combIndex = 0;
 	combWidth = 19;
-
+		combData = randomTest.slice();
 	
 	(paused)
 	{
@@ -105,7 +105,7 @@ function clearGraphs()
 	gnomeContext.fillRect(0, 0, 100*2, 256*2);
 	
 	var selectionContext = document.getElementById("selectionGraph").getContext("2d");
-		combData = randomTest.slice();
+
 	selectionContext.fillStyle = "white";
 	selectionContext.fillRect(0, 0, 100*2, 256*2);
 	
