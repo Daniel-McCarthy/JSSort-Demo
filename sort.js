@@ -85,14 +85,18 @@ function startSorts()
 	
 	//Init Bucket
 	bubbleIndex = 1;
-		combData = randomTest.slice();
+	
+	//Init Comb
+	combIndex = 0;
+	combWidth = 19;
+
 	
 	(paused)
 	{
 		pauseSorts();
 	}
 }
-		combData = randomTest.slice();
+
 function clearGraphs()
 {
 	var gnomeContext = document.getElementById("gnomeGraph").getContext("2d");
@@ -101,7 +105,7 @@ function clearGraphs()
 	gnomeContext.fillRect(0, 0, 100*2, 256*2);
 	
 	var selectionContext = document.getElementById("selectionGraph").getContext("2d");
-
+		combData = randomTest.slice();
 	selectionContext.fillStyle = "white";
 	selectionContext.fillRect(0, 0, 100*2, 256*2);
 	
@@ -115,7 +119,10 @@ function clearGraphs()
 	bubbleContext.fillStyle = "white";
 	bubbleContext.fillRect(0, 0, 100*2, 256*2);
 	
-	
+	var combContext = document.getElementById("combGraph").getContext("2d");
+
+	combContext.fillStyle = "white";
+	combContext.fillRect(0, 0, 100*2, 256*2);
 }
 
 function updateGraphs()
@@ -124,6 +131,7 @@ function updateGraphs()
 	var selectionContext = document.getElementById("selectionGraph").getContext("2d");
 	var insertionContext = document.getElementById("insertionGraph").getContext("2d");
 	var bubbleContext = document.getElementById("bubbleGraph").getContext("2d");
+	var combContext = document.getElementById("combGraph").getContext("2d");
 	clearGraphs();
 	
 	for(var i = 0; i < gnomeData.length; i++)
@@ -148,6 +156,12 @@ function updateGraphs()
 	{
 		bubbleContext.fillStyle = "black";
 		bubbleContext.fillRect(i*2, (256*2)-(bubbleData[i]*2), 1*2, 1*2);
+	}
+	
+	for(var i = 0; i < combData.length; i++)
+	{
+		combContext.fillStyle = "black";
+		combContext.fillRect(i*2, (256*2)-(combData[i]*2), 1*2, 1*2);
 	}
 }
 
