@@ -244,6 +244,28 @@ function insertionStep()
 	}
 }
 
+var bubbleIndex = 1;
+
+function bubbleStep()
+{
+	var c = 0;
+	
+	if (bubbleIndex >= bubbleData.length)
+	{
+		bubbleIndex = 1;
+	}
+	
+	if(bubbleData[bubbleIndex - 1] > bubbleData[bubbleIndex])
+	{
+		c = bubbleData[bubbleIndex - 1];
+		bubbleData[bubbleIndex - 1] = bubbleData[bubbleIndex];
+		bubbleData[bubbleIndex] = c;
+	}
+	
+	bubbleIndex++;
+	
+}
+
 function sleep() {}
 
 function isSorted(data)
