@@ -28,6 +28,7 @@ var gnomeData = [];
 var selectionData = [];
 var insertionData = [];
 var bubbleData = [];
+var combData = [];
 
 
 
@@ -55,6 +56,7 @@ function startSorts()
 		selectionData = descendingTest.slice();
 		insertionData = descendingTest.slice();
 		bubbleData = descendingTest.slice();
+		combData = descendingTest.slice();
 	}
 	else
 	{
@@ -83,7 +85,7 @@ function startSorts()
 	
 	//Init Bucket
 	bubbleIndex = 1;
-
+		combData = randomTest.slice();
 	
 	(paused)
 	{
@@ -329,6 +331,7 @@ function startTimer()
 		selectionData = descendingTest.slice();
 		insertionData = descendingTest.slice();
 		bubbleData = descendingTest.slice();
+		combData = descendingTest.slice();
 	}
 	else
 	{
@@ -336,6 +339,7 @@ function startTimer()
 		selectionData = randomTest.slice();
 		insertionData = randomTest.slice();
 		bubbleData = randomTest.slice();
+		combData = randomTest.slice();
 	}
 	
 	setInterval(stepAlgorithms, 0);
