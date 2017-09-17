@@ -96,7 +96,7 @@ function startSorts()
 		pauseSorts();
 	}
 }
-
+		combData = randomTest.slice();
 function clearGraphs()
 {
 	var gnomeContext = document.getElementById("gnomeGraph").getContext("2d");
@@ -315,6 +315,31 @@ function bubbleStep()
 	bubbleIndex++;
 	
 }
+
+var combIndex = 0;
+var combWidth = 19;
+
+function combStep()
+{
+	if((combIndex + combWidth) < combData.length)
+	{
+		if(combData[combIndex] > combData[combIndex + combWidth])
+		{
+			c = combData[combIndex];
+			combData[combIndex] = combData[combIndex + combWidth];
+			combData[combIndex + combWidth] = c;
+		}
+		
+		combIndex++;
+	}
+	else
+	{
+		combWidth--;
+		combIndex = 0;
+	}
+	
+}
+
 
 function sleep() {}
 
