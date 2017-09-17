@@ -1,5 +1,6 @@
 var paused = false;
 var step = false;
+var isRandomTestType = false;
 
 var descendingTest = [];
 var randomTest =
@@ -345,4 +346,9 @@ function stepAlgorithms()
 		updateGraphs();
 		step = false;
 	}
+}
+
+function swapTestType()
+{
+	isRandomTestType = !isRandomTestType;
 }
