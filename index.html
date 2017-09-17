@@ -20,9 +20,15 @@
 		<div id = "foreground" style="text-align: center; margin: 0 auto; width:300px; height:100px; background-color: #FF90AD; border-radius: 25px;border: 3px solid white;">
 
 
-			<input type="button" value="Start Sorts" id="startSortsButton" onclick="startSorts()" style= "height:35px;position:relative; top: 35px;" />
-			<input type="button" value="Step" id="sortsStepButton" onclick="sortStep()" style= "height:35px;position:relative; top: 35px;"/>
-			<input type="button" value="Pause" id="pauseButton" onclick="pauseSorts()" style= "height:35px;position:relative; top: 35px;"/>
+			<input type="button" value="Start Sorts" id="startSortsButton" onclick="startSorts()" style= "height:35px;position:relative; top: 10px;" />
+			<input type="button" value="Step" id="sortsStepButton" onclick="sortStep()" style= "height:35px;position:relative; top: 10px;"/>
+			<input type="button" value="Pause" id="pauseButton" onclick="pauseSorts()" style= "height:35px;position:relative; top: 10px;"/><br>
+			<input type = "radio" name = "testTypeSelect" style="position:relative; top: 25px;" onchange = "swapTestType()" checked>
+			<label style="position:relative; top: 25px;"> Descending Test<label/>
+			<input type = "radio" name = "testTypeSelect" style="position:relative; top: 0px;" onchange = "swapTestType()">
+			<label style="position:relative; top: 0px;">Random Test</label>
+		
+
 			
 		</div>
 	</body>
