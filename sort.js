@@ -64,7 +64,7 @@ function startSorts()
 		selectionData = randomTest.slice();
 		insertionData = randomTest.slice();
 		bubbleData = randomTest.slice();
-
+		combData = randomTest.slice();
 	}
 	
 	//Init Gnome
@@ -89,14 +89,14 @@ function startSorts()
 	//Init Comb
 	combIndex = 0;
 	combWidth = 19;
-		combData = randomTest.slice();
+
 	
 	(paused)
 	{
 		pauseSorts();
 	}
 }
-		combData = randomTest.slice();
+
 function clearGraphs()
 {
 	var gnomeContext = document.getElementById("gnomeGraph").getContext("2d");
