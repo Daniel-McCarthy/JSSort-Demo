@@ -276,6 +276,11 @@ function stepAlgorithms()
 		{
 			insertionStep();
 		}
+		
+		if(!isSorted(bubbleData))
+		{
+			bubbleStep();
+		}
 
 		
 		updateGraphs();
