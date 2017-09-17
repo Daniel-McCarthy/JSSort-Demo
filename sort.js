@@ -383,6 +383,10 @@ function stepAlgorithms()
 			bubbleStep();
 		}
 
+		if(!isSorted(combData))
+		{
+			combStep();
+		}
 		
 		updateGraphs();
 		step = false;
