@@ -92,7 +92,7 @@ function startSorts()
 		pauseSorts();
 	}
 }
-
+		combData = randomTest.slice();
 function clearGraphs()
 {
 	var gnomeContext = document.getElementById("gnomeGraph").getContext("2d");
