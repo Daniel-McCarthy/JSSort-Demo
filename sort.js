@@ -111,32 +111,32 @@ function clearGraphs()
 	var gnomeContext = document.getElementById("gnomeGraph").getContext("2d");
 	
 	gnomeContext.fillStyle = "white";
-	gnomeContext.fillRect(0, 0, 100*2, 256*2);
+	gnomeContext.fillRect(0, 0, 100*2, 100*2);
 	
 	var selectionContext = document.getElementById("selectionGraph").getContext("2d");
 
 	selectionContext.fillStyle = "white";
-	selectionContext.fillRect(0, 0, 100*2, 256*2);
+	selectionContext.fillRect(0, 0, 100*2, 100*2);
 	
 	var insertionContext = document.getElementById("insertionGraph").getContext("2d");
 
 	insertionContext.fillStyle = "white";
-	insertionContext.fillRect(0, 0, 100*2, 256*2);
+	insertionContext.fillRect(0, 0, 100*2, 100*2);
 	
 	var bubbleContext = document.getElementById("bubbleGraph").getContext("2d");
 
 	bubbleContext.fillStyle = "white";
-	bubbleContext.fillRect(0, 0, 100*2, 256*2);
+	bubbleContext.fillRect(0, 0, 100*2, 100*2);
 	
 	var combContext = document.getElementById("combGraph").getContext("2d");
 
 	combContext.fillStyle = "white";
-	combContext.fillRect(0, 0, 100*2, 256*2);
+	combContext.fillRect(0, 0, 100*2, 100*2);
 	
 	var shellContext = document.getElementById("shellGraph").getContext("2d");
 
 	shellContext.fillStyle = "white";
-	shellContext.fillRect(0, 0, 100*2, 256*2);
+	shellContext.fillRect(0, 0, 100*2, 100*2);
 }
 
 function updateGraphs()
@@ -152,37 +152,37 @@ function updateGraphs()
 	for(var i = 0; i < gnomeData.length; i++)
 	{
 		gnomeContext.fillStyle = "black";
-		gnomeContext.fillRect(i*2, (256*2)-(gnomeData[i]*2), 1*2, 1*2);
+		gnomeContext.fillRect(i*2, (100*2)-(gnomeData[i]*2), 1*2, 1*2);
 	}
 	
 	for(var i = 0; i < selectionData.length; i++)
 	{
 		selectionContext.fillStyle = "black";
-		selectionContext.fillRect(i*2, (256*2)-(selectionData[i]*2), 1*2, 1*2);
+		selectionContext.fillRect(i*2, (100*2)-(selectionData[i]*2), 1*2, 1*2);
 	}
 	
 	for(var i = 0; i < insertionData.length; i++)
 	{
 		insertionContext.fillStyle = "black";
-		insertionContext.fillRect(i*2, (256*2)-(insertionData[i]*2), 1*2, 1*2);
+		insertionContext.fillRect(i*2, (100*2)-(insertionData[i]*2), 1*2, 1*2);
 	}
 	
 	for(var i = 0; i < bubbleData.length; i++)
 	{
 		bubbleContext.fillStyle = "black";
-		bubbleContext.fillRect(i*2, (256*2)-(bubbleData[i]*2), 1*2, 1*2);
+		bubbleContext.fillRect(i*2, (100*2)-(bubbleData[i]*2), 1*2, 1*2);
 	}
 	
 	for(var i = 0; i < combData.length; i++)
 	{
 		combContext.fillStyle = "black";
-		combContext.fillRect(i*2, (256*2)-(combData[i]*2), 1*2, 1*2);
+		combContext.fillRect(i*2, (100*2)-(combData[i]*2), 1*2, 1*2);
 	}
 	
 	for(var i = 0; i < combData.length; i++)
 	{
 		shellContext.fillStyle = "black";
-		shellContext.fillRect(i*2, (256*2)-(shellData[i]*2), 1*2, 1*2);
+		shellContext.fillRect(i*2, (100*2)-(shellData[i]*2), 1*2, 1*2);
 	}
 }
 
@@ -380,7 +380,6 @@ function shellStep()
 
 	if((shellGap + shellIndex) < shellData.length)
 	{
-		//c = shellData[shellGapIndex];
 		
 		if((shellSecondaryIndex >= shellGap) && (shellC < shellData[shellSecondaryIndex - shellGap]))
 		{
@@ -403,10 +402,6 @@ function shellStep()
 		shellIndex = 0;
 		shellSecondaryIndex = shellGap + shellIndex;
 		shellC = shellData[shellSecondaryIndex];
-		//shellGapIndex++;
-		//shellIndex = shellGap[shellGapIndex];
-		//shellSecondaryIndex = shellIndex;
-		//shellC = shellData[shellGapIndex];
 	}
 }
 
