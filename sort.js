@@ -527,6 +527,62 @@ function oddEvenStep()
 
 }
 
+var cocktailIndex = 0;
+var beginning = 0;
+var end = 0;
+var cocktailC = 0;
+var left = true;
+
+function cocktailStep()
+{
+	if(beginning == 0 && end == 0)
+	{
+		end = cocktailData.length - 1;
+	}
+	
+	if(left)
+	{
+		if((beginning + cocktailIndex) < end)
+		{
+			if(cocktailData[beginning + cocktailIndex] > (cocktailData[beginning + cocktailIndex + 1]))
+			{
+				cocktailC = cocktailData[beginning + cocktailIndex];
+				cocktailData[beginning + cocktailIndex] = cocktailData[beginning + cocktailIndex + 1];
+				cocktailData[beginning + cocktailIndex + 1] = cocktailC;
+			}
+			
+			cocktailIndex++;
+		}
+		else
+		{
+			left = false;
+			end--;
+			cocktailIndex = 0;
+		}
+	}
+	else
+	{
+		if((end + cocktailIndex) > beginning)
+		{
+			if(cocktailData[end + cocktailIndex] < cocktailData[end + cocktailIndex - 1])
+			{
+				cocktailC = cocktailData[end + cocktailIndex];
+				cocktailData[end + cocktailIndex] = cocktailData[end + cocktailIndex - 1];
+				cocktailData[end + cocktailIndex - 1] = cocktailC;
+			}
+
+			cocktailIndex--;
+		}
+		else
+		{
+			left = true;
+			beginning++;
+			cocktailIndex = 0;
+		}
+	}
+}
+
+
 function sleep() {}
 
 function isSorted(data)
