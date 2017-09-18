@@ -591,6 +591,11 @@ function stepAlgorithms()
 			oddEvenStep();
 		}
 		
+		if(!isSorted(cocktailData))
+		{
+			cocktailStep();
+		}
+		
 		updateGraphs();
 		step = false;
 	}
