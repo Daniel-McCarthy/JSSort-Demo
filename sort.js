@@ -359,6 +359,54 @@ function combStep()
 	
 }
 
+var shellInitialRun = true;
+var shellIndex = 0;
+var shellSecondaryIndex = 0;
+var shellGap = 0;
+
+var shellC = 0;
+function shellStep()
+{
+	if(shellInitialRun)
+	{
+		shellGap = shellData.length / 2;
+		shellIndex = 0;
+		shellSecondaryIndex = shellGap + shellIndex;
+		shellC = shellData[shellSecondaryIndex];
+		shellInitialRun = false;
+	}
+
+	if((shellGap + shellIndex) < shellData.length)
+	{
+		//c = shellData[shellGapIndex];
+		
+		if((shellSecondaryIndex >= shellGap) && (shellC < shellData[shellSecondaryIndex - shellGap]))
+		{
+			shellData[shellSecondaryIndex] = shellData[shellSecondaryIndex - shellGap];
+			shellSecondaryIndex -= shellGap;
+		}
+		else
+		{
+			shellData[shellSecondaryIndex] = shellC;
+			shellIndex++;
+			shellSecondaryIndex = shellGap + shellIndex;
+			shellC = shellData[shellSecondaryIndex];
+		}
+
+
+	}
+	else
+	{
+		shellGap = Math.floor(shellGap/2);
+		shellIndex = 0;
+		shellSecondaryIndex = shellGap + shellIndex;
+		shellC = shellData[shellSecondaryIndex];
+		//shellGapIndex++;
+		//shellIndex = shellGap[shellGapIndex];
+		//shellSecondaryIndex = shellIndex;
+		//shellC = shellData[shellGapIndex];
+	}
+}
 
 function sleep() {}
 
