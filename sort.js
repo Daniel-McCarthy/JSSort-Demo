@@ -29,6 +29,7 @@ var selectionData = [];
 var insertionData = [];
 var bubbleData = [];
 var combData = [];
+var shellData = [];
 
 
 
@@ -57,6 +58,7 @@ function startSorts()
 		insertionData = descendingTest.slice();
 		bubbleData = descendingTest.slice();
 		combData = descendingTest.slice();
+		shellData = descendingTest.slice();
 	}
 	else
 	{
@@ -65,6 +67,7 @@ function startSorts()
 		insertionData = randomTest.slice();
 		bubbleData = randomTest.slice();
 		combData = randomTest.slice();
+		shellData = randomTest.slice();
 	}
 	
 	//Init Gnome
@@ -371,6 +374,7 @@ function startTimer()
 		insertionData = descendingTest.slice();
 		bubbleData = descendingTest.slice();
 		combData = descendingTest.slice();
+		shellData = descendingTest.slice();
 	}
 	else
 	{
@@ -379,6 +383,7 @@ function startTimer()
 		insertionData = randomTest.slice();
 		bubbleData = randomTest.slice();
 		combData = randomTest.slice();
+		shellData = randomTest.slice();
 	}
 	
 	setInterval(stepAlgorithms, 0);
