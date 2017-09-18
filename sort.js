@@ -464,6 +464,32 @@ function shellStep()
 	}
 }
 
+var oddEvenIndex = 0;
+var oddEvenSecondaryIndex = 2;
+var oddEvenC = 0;
+
+function oddEvenStep()
+{
+	if(oddEvenSecondaryIndex < oddEvenData.length)
+	{
+		if(oddEvenData[oddEvenSecondaryIndex] < oddEvenData[oddEvenSecondaryIndex - 1])
+		{
+			oddEvenC = oddEvenData[oddEvenSecondaryIndex];
+			oddEvenData[oddEvenSecondaryIndex] = oddEvenData[oddEvenSecondaryIndex - 1];
+			oddEvenData[oddEvenSecondaryIndex - 1] = oddEvenC;
+			
+		}
+		
+		oddEvenSecondaryIndex += 2;
+	}
+	else
+	{
+		oddEvenIndex++;
+		oddEvenSecondaryIndex = ((oddEvenIndex % 2) == 0) ? 2 : 1;
+	}
+
+}
+
 function sleep() {}
 
 function isSorted(data)
