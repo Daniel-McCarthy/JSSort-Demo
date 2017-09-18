@@ -417,7 +417,7 @@ function isSorted(data)
 	var sorted = true;
 	for(var i = 1; i < data.length; i++)
 	{
-			if(data[i - 1] > data[i])
+			if(data[i - 1] >= data[i])
 			{
 				sorted = false;
 			}
