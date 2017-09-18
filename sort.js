@@ -338,7 +338,7 @@ function selectionStep()
 		closestIndex = selectionIndex;
 	}
 	
-	if((selectionSecondIndex + 1) < selectionData.length)
+	if(selectionSecondIndex < selectionData.length)
 	{
 		if(selectionData[selectionSecondIndex] < closestValue)
 		{
