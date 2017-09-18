@@ -24,7 +24,7 @@
 		<canvas 	id="bubbleGraph" width="200" height="200" style= "position:relative; left: 45px;"></canvas>
 		<canvas 	id="combGraph" width="200" height="200" style= "position:relative; left: 60px;"></canvas>
 		<canvas 	id="shellGraph" width="200" height="200" style= "position:relative; left: 75px;"></canvas>
-		<div id = "foreground" style="text-align: center; margin: 0 auto; width:300px; height:100px; background-color: #FF90AD; border-radius: 25px;border: 3px solid white;">
+		<div id = "foreground" style="text-align: center; margin: 0 auto; width:300px; height:130px; background-color: #FF90AD; border-radius: 25px;border: 3px solid white;">
 
 
 			<input type="button" value="Start Sorts" id="startSortsButton" onclick="startSorts()" style= "height:35px;position:relative; top: 10px;" />
@@ -33,7 +33,12 @@
 			<input type = "radio" name = "testTypeSelect" style="position:relative; top: 25px;" onchange = "swapTestType()" checked>
 			<label style="position:relative; top: 25px;"> Descending Test<label/>
 			<input type = "radio" name = "testTypeSelect" style="position:relative; top: 0px;" onchange = "swapTestType()">
-			<label style="position:relative; top: 0px;">Random Test</label>
+			<label style="position:relative; top: 0px;">Random Test</label><br>
+		
+			<input type = "radio" name = "drawTypeSelect" style="position:relative; top: 15px;" onchange = "swapDrawingType()" checked>
+			<label style="position:relative; top: 15px;"> Dot Drawing<label/>
+			<input type = "radio" name = "drawTypeSelect" style="position:relative; top: 0px;" onchange = "swapDrawingType()">
+			<label style="position:relative; top: 0px;"> Line Drawing</label>
 		
 
 			
