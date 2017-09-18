@@ -108,6 +108,12 @@ function startSorts()
 	//Init Odd Even
 	oddEvenIndex = 0;
 	oddEvenSecondaryIndex = 2;
+	
+	//Init Cocktail
+	cocktailIndex = 0;
+	beginning = 0;
+	end = 0;
+	cocktailC = 0;
 
 	
 	(paused)
