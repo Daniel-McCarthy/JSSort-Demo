@@ -182,7 +182,7 @@ function updateGraphs()
 			combContext.fillRect(i*2, (100*2)-(combData[i]*2), 1*2, combData[i]*2);
 		}
 		
-		for(var i = 0; i < combData.length; i++)
+		for(var i = 0; i < shellData.length; i++)
 		{
 			shellContext.fillStyle = "black";
 			shellContext.fillRect(i*2, (100*2)-(shellData[i]*2), 1*2, shellData[i]*2);
