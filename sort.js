@@ -530,6 +530,11 @@ function stepAlgorithms()
 			shellStep();
 		}
 		
+		if(!isSorted(oddEvenData))
+		{
+			oddEvenStep();
+		}
+		
 		updateGraphs();
 		step = false;
 	}
