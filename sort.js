@@ -153,6 +153,11 @@ function clearGraphs()
 	oddEvenContext.fillStyle = "white";
 	oddEvenContext.fillRect(0, 0, 100*2, 100*2);
 	
+	var cocktailContext = document.getElementById("cocktailGraph").getContext("2d");
+
+	cocktailContext.fillStyle = "white";
+	cocktailContext.fillRect(0, 0, 100*2, 100*2);
+	
 }
 
 function updateGraphs()
@@ -164,6 +169,7 @@ function updateGraphs()
 	var combContext = document.getElementById("combGraph").getContext("2d");
 	var shellContext = document.getElementById("shellGraph").getContext("2d");
 	var oddEvenContext = document.getElementById("oddEvenGraph").getContext("2d");
+	var cocktailContext = document.getElementById("cocktailGraph").getContext("2d");
 	clearGraphs();
 	
 	if(isLineMode)
@@ -210,6 +216,12 @@ function updateGraphs()
 			oddEvenContext.fillRect(i*2, (100*2)-(oddEvenData[i]*2), 1*2, oddEvenData[i]*2);
 		}
 		
+		for(var i = 0; i < cocktailData.length; i++)
+		{
+			cocktailContext.fillStyle = "black";
+			cocktailContext.fillRect(i*2, (100*2)-(cocktailData[i]*2), 1*2, cocktailData[i]*2);
+		}
+		
 	}
 	else
 	{
@@ -253,6 +265,12 @@ function updateGraphs()
 		{
 			oddEvenContext.fillStyle = "black";
 			oddEvenContext.fillRect(i*2, (100*2)-(oddEvenData[i]*2), 1*2, 1*2);
+		}
+		
+		for(var i = 0; i < cocktailData.length; i++)
+		{
+			cocktailContext.fillStyle = "black";
+			cocktailContext.fillRect(i*2, (100*2)-(cocktailData[i]*2), 1*2, 1*2);
 		}
 	
 	}
