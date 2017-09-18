@@ -1,6 +1,7 @@
 var paused = false;
 var step = false;
 var isRandomTestType = false;
+var isLineMode = false;
 
 var descendingTest = [];
 var randomTest =
@@ -149,7 +150,47 @@ function updateGraphs()
 	var shellContext = document.getElementById("shellGraph").getContext("2d");
 	clearGraphs();
 	
-	for(var i = 0; i < gnomeData.length; i++)
+	if(isLineMode)
+	{
+		for(var i = 0; i < gnomeData.length; i++)
+		{
+			gnomeContext.fillStyle = "black";
+			gnomeContext.fillRect(i*2, (100*2)-(gnomeData[i]*2), 1*2, shellData[i]*2);
+		}
+		
+		for(var i = 0; i < selectionData.length; i++)
+		{
+			selectionContext.fillStyle = "black";
+			selectionContext.fillRect(i*2, (100*2)-(selectionData[i]*2), 1*2, shellData[i]*2);
+		}
+		
+		for(var i = 0; i < insertionData.length; i++)
+		{
+			insertionContext.fillStyle = "black";
+			insertionContext.fillRect(i*2, (100*2)-(insertionData[i]*2), 1*2, shellData[i]*2);
+		}
+		
+		for(var i = 0; i < bubbleData.length; i++)
+		{
+			bubbleContext.fillStyle = "black";
+			bubbleContext.fillRect(i*2, (100*2)-(bubbleData[i]*2), 1*2, shellData[i]*2);
+		}
+		
+		for(var i = 0; i < combData.length; i++)
+		{
+			combContext.fillStyle = "black";
+			combContext.fillRect(i*2, (100*2)-(combData[i]*2), 1*2, shellData[i]*2);
+		}
+		
+		for(var i = 0; i < combData.length; i++)
+		{
+			shellContext.fillStyle = "black";
+			shellContext.fillRect(i*2, (100*2)-(shellData[i]*2), 1*2, shellData[i]*2);
+		}
+	}
+	else
+	{
+		for(var i = 0; i < gnomeData.length; i++)
 	{
 		gnomeContext.fillStyle = "black";
 		gnomeContext.fillRect(i*2, (100*2)-(gnomeData[i]*2), 1*2, 1*2);
@@ -183,6 +224,7 @@ function updateGraphs()
 	{
 		shellContext.fillStyle = "black";
 		shellContext.fillRect(i*2, (100*2)-(shellData[i]*2), 1*2, 1*2);
+	}
 	}
 }
 
@@ -492,4 +534,9 @@ function stepAlgorithms()
 function swapTestType()
 {
 	isRandomTestType = !isRandomTestType;
+}
+
+function swapDrawingType()
+{
+	isLineMode = !isLineMode;
 }
