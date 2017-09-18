@@ -126,6 +126,11 @@ function clearGraphs()
 
 	combContext.fillStyle = "white";
 	combContext.fillRect(0, 0, 100*2, 256*2);
+	
+	var shellContext = document.getElementById("shellGraph").getContext("2d");
+
+	shellContext.fillStyle = "white";
+	shellContext.fillRect(0, 0, 100*2, 256*2);
 }
 
 function updateGraphs()
@@ -135,6 +140,7 @@ function updateGraphs()
 	var insertionContext = document.getElementById("insertionGraph").getContext("2d");
 	var bubbleContext = document.getElementById("bubbleGraph").getContext("2d");
 	var combContext = document.getElementById("combGraph").getContext("2d");
+	var shellContext = document.getElementById("shellGraph").getContext("2d");
 	clearGraphs();
 	
 	for(var i = 0; i < gnomeData.length; i++)
@@ -165,6 +171,12 @@ function updateGraphs()
 	{
 		combContext.fillStyle = "black";
 		combContext.fillRect(i*2, (256*2)-(combData[i]*2), 1*2, 1*2);
+	}
+	
+	for(var i = 0; i < combData.length; i++)
+	{
+		shellContext.fillStyle = "black";
+		shellContext.fillRect(i*2, (256*2)-(shellData[i]*2), 1*2, 1*2);
 	}
 }
 
