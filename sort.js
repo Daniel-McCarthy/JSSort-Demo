@@ -101,6 +101,10 @@ function startSorts()
 	//Init Shell
 	shellIndex = 0;
 	shellInitialRun = true;
+	
+	//Init Odd Even
+	oddEvenIndex = 0;
+	oddEvenSecondaryIndex = 2;
 
 	
 	(paused)
@@ -140,6 +144,12 @@ function clearGraphs()
 
 	shellContext.fillStyle = "white";
 	shellContext.fillRect(0, 0, 100*2, 100*2);
+	
+	var oddEvenContext = document.getElementById("oddEvenGraph").getContext("2d");
+
+	oddEvenContext.fillStyle = "white";
+	oddEvenContext.fillRect(0, 0, 100*2, 100*2);
+	
 }
 
 function updateGraphs()
