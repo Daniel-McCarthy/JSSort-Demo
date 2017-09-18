@@ -434,6 +434,11 @@ function stepAlgorithms()
 			combStep();
 		}
 		
+		if(!isSorted(shellData))
+		{
+			shellStep();
+		}
+		
 		updateGraphs();
 		step = false;
 	}
