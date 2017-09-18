@@ -92,6 +92,10 @@ function startSorts()
 	//Init Comb
 	combIndex = 0;
 	combWidth = 19;
+	
+	//Init Shell
+	shellIndex = 0;
+	shellInitialRun = true;
 
 	
 	(paused)
