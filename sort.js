@@ -126,42 +126,42 @@ function clearGraphs()
 {
 	var gnomeContext = document.getElementById("gnomeGraph").getContext("2d");
 	
-	gnomeContext.fillStyle = "white";
+	gnomeContext.fillStyle = "#FFDFFD";
 	gnomeContext.fillRect(0, 0, 100*2, 100*2);
 	
 	var selectionContext = document.getElementById("selectionGraph").getContext("2d");
 
-	selectionContext.fillStyle = "white";
+	selectionContext.fillStyle = "#FFDFFD";
 	selectionContext.fillRect(0, 0, 100*2, 100*2);
 	
 	var insertionContext = document.getElementById("insertionGraph").getContext("2d");
 
-	insertionContext.fillStyle = "white";
+	insertionContext.fillStyle = "#FFDFFD";
 	insertionContext.fillRect(0, 0, 100*2, 100*2);
 	
 	var bubbleContext = document.getElementById("bubbleGraph").getContext("2d");
 
-	bubbleContext.fillStyle = "white";
+	bubbleContext.fillStyle = "#FFDFFD";
 	bubbleContext.fillRect(0, 0, 100*2, 100*2);
 	
 	var combContext = document.getElementById("combGraph").getContext("2d");
 
-	combContext.fillStyle = "white";
+	combContext.fillStyle = "#FFDFFD";
 	combContext.fillRect(0, 0, 100*2, 100*2);
 	
 	var shellContext = document.getElementById("shellGraph").getContext("2d");
 
-	shellContext.fillStyle = "white";
+	shellContext.fillStyle = "#FFDFFD";
 	shellContext.fillRect(0, 0, 100*2, 100*2);
 	
 	var oddEvenContext = document.getElementById("oddEvenGraph").getContext("2d");
 
-	oddEvenContext.fillStyle = "white";
+	oddEvenContext.fillStyle = "#FFDFFD";
 	oddEvenContext.fillRect(0, 0, 100*2, 100*2);
 	
 	var cocktailContext = document.getElementById("cocktailGraph").getContext("2d");
 
-	cocktailContext.fillStyle = "white";
+	cocktailContext.fillStyle = "#FFDFFD";
 	cocktailContext.fillRect(0, 0, 100*2, 100*2);
 	
 }
