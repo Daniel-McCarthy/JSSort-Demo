@@ -706,6 +706,11 @@ function stepAlgorithms()
 			cocktailStep();
 		}
 		
+		if(!isSorted(mergeData))
+		{
+			mergeStep();
+		}
+		
 		updateGraphs();
 		step = false;
 	}
