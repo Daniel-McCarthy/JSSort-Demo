@@ -118,7 +118,13 @@ function startSorts()
 	beginning = 0;
 	end = 0;
 	cocktailC = 0;
-
+	
+	//Init Merge
+	mergeArrayLength = 2;
+	mergeIndex = 0;
+	mergeArrayIndex = 0;
+	mergeArray = [];
+	mergeSubArraySorted = false;
 	
 	(paused)
 	{
