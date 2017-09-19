@@ -610,6 +610,50 @@ function cocktailStep()
 	}
 }
 
+var mergeArrayLength = 2;
+var mergeIndex = 0;
+var mergeArrayIndex = 0;
+var mergeArray = [];
+var mergeSubArraySorted = false;
+
+function mergeStep()
+{
+	mergeArrayIndex = (mergeData.length - (mergeArrayLength % mergeData.length));
+	
+	if(!mergeSubArraySorted)
+	{
+		if(mergeArray.length < mergeArrayLength)
+		{
+			//Populate Array
+			mergeArray.push(mergeData[mergeIndex++]);
+		}
+		else
+		{
+			//Write Array Data back
+			mergeArray.sort(function (x, y) {  return x - y;  });
+			for(var i = 0; i < mergeArrayLength; i++)
+			{
+				mergeData[(mergeIndex - mergeArrayLength) + i] = mergeArray[i];
+			}
+			
+			mergeArray = [];
+			
+			if(mergeIndex >= mergeData.length)
+			{
+				mergeSubArraySorted = true;
+			}
+		}
+		
+	}
+	else
+	{
+		mergeIndex = 0;
+		mergeArrayLength *= 2;
+		mergeArrayIndex = 0;
+		array = [];
+		mergeSubArraySorted = false;
+	}
+}
 
 function sleep() {}
 
