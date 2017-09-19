@@ -174,6 +174,11 @@ function clearGraphs()
 	cocktailContext.fillStyle = "#FFDFFD";
 	cocktailContext.fillRect(0, 0, 100*2, 100*2);
 	
+	var mergeContext = document.getElementById("mergeGraph").getContext("2d");
+
+	mergeContext.fillStyle = "#FFDFFD";
+	mergeContext.fillRect(0, 0, 100*2, 100*2);
+	
 }
 
 function updateGraphs()
@@ -186,6 +191,7 @@ function updateGraphs()
 	var shellContext = document.getElementById("shellGraph").getContext("2d");
 	var oddEvenContext = document.getElementById("oddEvenGraph").getContext("2d");
 	var cocktailContext = document.getElementById("cocktailGraph").getContext("2d");
+	var mergeContext = document.getElementById("mergeGraph").getContext("2d");
 	clearGraphs();
 	
 	if(isLineMode)
@@ -238,6 +244,12 @@ function updateGraphs()
 			cocktailContext.fillRect(i*2, (100*2)-(cocktailData[i]*2), 1*2, cocktailData[i]*2);
 		}
 		
+		for(var i = 0; i < mergeData.length; i++)
+		{
+			mergeContext.fillStyle = "black";
+			mergeContext.fillRect(i*2, (100*2)-(mergeData[i]*2), 1*2, mergeData[i]*2);
+		}
+		
 	}
 	else
 	{
@@ -287,6 +299,12 @@ function updateGraphs()
 		{
 			cocktailContext.fillStyle = "black";
 			cocktailContext.fillRect(i*2, (100*2)-(cocktailData[i]*2), 1*2, 1*2);
+		}
+		
+		for(var i = 0; i < mergeData.length; i++)
+		{
+			mergeContext.fillStyle = "black";
+			mergeContext.fillRect(i*2, (100*2)-(mergeData[i]*2), 1*2, 1*2);
 		}
 	
 	}
