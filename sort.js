@@ -182,6 +182,11 @@ function clearGraphs()
 	mergeContext.fillStyle = "#FFDFFD";
 	mergeContext.fillRect(0, 0, 100*2, 100*2);
 	
+	var slopeContext = document.getElementById("slopeGraph").getContext("2d");
+
+	slopeContext.fillStyle = "#FFDFFD";
+	slopeContext.fillRect(0, 0, 100*2, 100*2);
+	
 }
 
 function updateGraphs()
@@ -195,6 +200,7 @@ function updateGraphs()
 	var oddEvenContext = document.getElementById("oddEvenGraph").getContext("2d");
 	var cocktailContext = document.getElementById("cocktailGraph").getContext("2d");
 	var mergeContext = document.getElementById("mergeGraph").getContext("2d");
+	var slopeContext = document.getElementById("slopeGraph").getContext("2d");
 	clearGraphs();
 	
 	if(isLineMode)
@@ -253,6 +259,12 @@ function updateGraphs()
 			mergeContext.fillRect(i*2, (100*2)-(mergeData[i]*2), 1*2, mergeData[i]*2);
 		}
 		
+		for(var i = 0; i < slopeData.length; i++)
+		{
+			slopeContext.fillStyle = "black";
+			slopeSelectionContext.fillRect(i*2, (100*2)-(slopeData[i]*2), 1*2, slopeData[i]*2);
+		}
+		
 	}
 	else
 	{
@@ -308,6 +320,12 @@ function updateGraphs()
 		{
 			mergeContext.fillStyle = "black";
 			mergeContext.fillRect(i*2, (100*2)-(mergeData[i]*2), 1*2, 1*2);
+		}
+		
+		for(var i = 0; i < slopeData.length; i++)
+		{
+			slopeContext.fillStyle = "black";
+			slopeContext.fillRect(i*2, (100*2)-(slopeData[i]*2), 1*2, 1*2);
 		}
 	
 	}
