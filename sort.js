@@ -687,6 +687,114 @@ function mergeStep()
 	}
 }
 
+
+
+var isEvenTurn = true;
+var evenIndex = 2;
+var oddIndex = 3;
+var evenHasSwapped = false;
+var oddHasSwapped = false;
+var isEvenSorted = false;
+var isOddSorted = false;
+
+function slopeStep()
+{
+	var c = 0;
+	
+	if(!isEvenSorted || !isOddSorted)
+	{
+		if(isEvenTurn)
+		{
+
+			if(evenIndex < slopeData.length)
+			{
+				if(slopeData[evenIndex] < slopeData[evenIndex - 2])
+				{
+					//Swap
+					c = slopeData[evenIndex];
+					slopeData[evenIndex] = slopeData[evenIndex - 2];
+					slopeData[evenIndex - 2] = c;
+					
+					evenHasSwapped = true;
+				}
+				
+				evenIndex += 2;
+			}
+			else
+			{
+				if(!evenHasSwapped)
+				{
+					isEvenSorted = true;
+					isEvenTurn = false;
+				}
+				
+				evenIndex = 2;
+				evenHasSwapped = false;
+				
+				isEvenTurn = false;
+			}
+		}
+		else
+		{
+			if(oddIndex < (slopeData.length))
+			{
+				if(slopeData[oddIndex] < slopeData[oddIndex - 2])
+				{
+					//Swap
+					c = slopeData[oddIndex];
+					slopeData[oddIndex] = slopeData[oddIndex - 2];
+					slopeData[oddIndex - 2] = c;
+					
+					oddHasSwapped = true;
+				}
+				
+				oddIndex += 2;
+			}
+			else
+			{
+				if(!oddHasSwapped)
+				{
+					isOddSorted = true;
+				}
+				
+				oddIndex = 3;
+				oddHasSwapped = false;
+				
+				isEvenTurn = true;
+			}
+		}
+	}
+	
+	else
+	{
+		if(evenIndex == 0 && oddIndex == 0)
+		{
+			evenIndex = 0;
+			oddIndex = 1;
+		}
+
+		if(oddIndex < slopeData.length)
+		{
+			if(slopeData[oddIndex] < slopeData[evenIndex])
+			{
+				//Swap
+				c = slopeData[evenIndex];
+				slopeData[evenIndex] = slopeData[oddIndex];
+				slopeData[oddIndex] = c;
+			}
+			
+			evenIndex++;
+			oddIndex++;
+		}
+		else
+		{
+			evenIndex = 0;
+			oddIndex = 1;
+		}
+	}
+}
+
+
 function sleep() {}
 
 function isSorted(data)
