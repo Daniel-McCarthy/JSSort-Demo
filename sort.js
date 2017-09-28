@@ -129,6 +129,17 @@ function startSorts()
 	mergeArray = [];
 	mergeSubArraySorted = false;
 	
+	//Init Slope
+	isEvenTurn = true;
+	evenIndex = 2;
+	oddIndex = 3;
+	evenHasSwapped = false;
+	oddHasSwapped = false;
+	isEvenSorted = false;
+	isOddSorted = false;
+
+	
+	
 	(paused)
 	{
 		pauseSorts();
