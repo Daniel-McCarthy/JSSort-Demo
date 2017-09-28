@@ -36,6 +36,7 @@ var shellData = [];
 var oddEvenData = [];
 var cocktailData = [];
 var mergeData = [];
+var slopeData = [];
 
 
 
@@ -68,6 +69,7 @@ function startSorts()
 		oddEvenData = descendingTest.slice();
 		cocktailData = descendingTest.slice();
 		mergeData = descendingTest.slice();
+		slopeData = descendingTest.slice();
 	}
 	else
 	{
@@ -80,6 +82,7 @@ function startSorts()
 		oddEvenData = randomTest.slice();
 		cocktailData = randomTest.slice();
 		mergeData = randomTest.slice();
+		slopeData = randomTest.slice();
 	}
 	
 	//Init Gnome
@@ -689,6 +692,7 @@ function startTimer()
 		oddEvenData = descendingTest.slice();
 		cocktailData = descendingTest.slice();
 		mergeData = descendingTest.slice();
+		slopeData = descendingTest.slice();
 	}
 	else
 	{
@@ -701,6 +705,7 @@ function startTimer()
 		oddEvenData = randomTest.slice();
 		cocktailData = randomTest.slice();
 		mergeData = randomTest.slice();
+		slopeData = randomTest.slice();
 	}
 	
 	setInterval(stepAlgorithms, 0);
