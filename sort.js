@@ -760,6 +760,11 @@ function stepAlgorithms()
 			mergeStep();
 		}
 		
+		if(!isSorted(slopeData))
+		{
+			slopeStep();
+		}
+		
 		updateGraphs();
 		step = false;
 	}
