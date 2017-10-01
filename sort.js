@@ -273,7 +273,7 @@ function updateGraphs()
 		for(var i = 0; i < slopeData.length; i++)
 		{
 			slopeContext.fillStyle = "black";
-			slopeSelectionContext.fillRect(i*2, (100*2)-(slopeData[i]*2), 1*2, slopeData[i]*2);
+			slopeContext.fillRect(i*2, (100*2)-(slopeData[i]*2), 1*2, slopeData[i]*2);
 		}
 		
 	}
