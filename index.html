@@ -7,80 +7,82 @@
 		<title>
 			JSSort Demo
 		</title>
+		
+		<link rel="stylesheet" type="text/css" href="index.css">
 	</head>
 
-	<body onload="startTimer()" style= "background-color:pink;">
+	<body onload="startTimer()">
 		<script type = "text/javascript" src = "sort.js"></script>	
 		
 		
-		<div style="display: inline-block; min-width: 210px;">
+		<div id="gnomeDiv">
 			<label>Gnome Sort:</label><br>
-			<canvas 	id="gnomeGraph" width="200" height="200" style= "border-radius: 10px;border: 3px solid #FF90AD;"></canvas>
+			<canvas 	id="gnomeGraph" width="200" height="200"></canvas>
 		</div>
 		
-		<div style="display: inline-block; min-width: 210px;">
+		<div id="selectionDiv">
 			<label>Selection Sort:</label><br>
-			<canvas 	id="selectionGraph" width="200" height="200" style= "border-radius: 10px;border: 3px solid #FF90AD;"></canvas>
+			<canvas 	id="selectionGraph" width="200" height="200"></canvas>
 		</div>
 		
-		<div style="display: inline-block; min-width: 210px;">
+		<div id="insertionDiv">
 			<label>Insertion Sort:</label><br>
-			<canvas 	id="insertionGraph" width="200" height="200" style= "border-radius: 10px;border: 3px solid #FF90AD;"></canvas>
+			<canvas 	id="insertionGraph" width="200" height="200"></canvas>
 		</div>
 		
-		<div style="display: inline-block; min-width: 210px;">
+		<div id="bubbleDiv">
 			<label>Bubble Sort:</label><br>
-			<canvas 	id="bubbleGraph" width="200" height="200" style= "border-radius: 10px;border: 3px solid #FF90AD;"></canvas>
+			<canvas 	id="bubbleGraph" width="200" height="200"></canvas>
 		</div>
 		
-		<div style="display: inline-block; min-width: 210px;">
+		<div id="combDiv">
 			<label>Comb Sort:</label><br>
-			<canvas 	id="combGraph" width="200" height="200" style= "border-radius: 10px;border: 3px solid #FF90AD;"></canvas>
+			<canvas 	id="combGraph" width="200" height="200"></canvas>
 		</div>
 		
-		<div style="display: inline-block; min-width: 210px;">
+		<div id="shellDiv">
 			<label>Shell Sort:</label><br>
-			<canvas 	id="shellGraph" width="200" height="200" style= "border-radius: 10px;border: 3px solid #FF90AD;"></canvas>
+			<canvas 	id="shellGraph" width="200" height="200"></canvas>
 		</div>
 		
-		<div style="display: inline-block; min-width: 210px;">
+		<div id="oddEvenDiv">
 			<label>Odd Even Sort:</label><br>
-			<canvas 	id="oddEvenGraph" width="200" height="200" style = "border-radius: 10px;border: 3px solid #FF90AD;"></canvas>
+			<canvas 	id="oddEvenGraph" width="200" height="200"></canvas>
 		</div>
 		
-		<div style="display: inline-block; min-width: 210px;">
+		<div id="cocktailDiv">
 			<label>Cocktail Sort:</label><br>
-			<canvas 	id="cocktailGraph" width="200" height="200" style= "border-radius: 10px;border: 3px solid #FF90AD;"></canvas>
+			<canvas 	id="cocktailGraph" width="200" height="200"></canvas>
 		</div>
 		
-		<div style="display: inline-block; min-width: 210px;">
+		<div id="mergeDiv">
 			<label>Merge Sort:</label><br>
-			<canvas 	id="mergeGraph" width="200" height="200" style= "border-radius: 10px;border: 3px solid #FF90AD;"></canvas>
+			<canvas 	id="mergeGraph" width="200" height="200"></canvas>
 		</div>
 		
-		<div style="display: inline-block; min-width: 210px;">
+		<div id="slopeDiv">
 			<label>Slope Sort:</label><br>
-			<canvas 	id="slopeGraph" width="200" height="200" style= "border-radius: 10px;border: 3px solid #FF90AD;"></canvas>
+			<canvas 	id="slopeGraph" width="200" height="200"></canvas>
 		</div>
 		
 
 		
 		
-		<div id = "foreground" style="text-align: center; margin: 0 auto; width:300px; height:130px; background-color: #FF90AD; border-radius: 25px;border: 3px solid white;">
+		<div id = "foreground">
 
 
-			<input type="button" value="Start Sorts" id="startSortsButton" onclick="startSorts()" style= "height:35px;position:relative; top: 10px;" />
-			<input type="button" value="Step" id="sortsStepButton" onclick="sortStep()" style= "height:35px;position:relative; top: 10px;"/>
-			<input type="button" value="Pause" id="pauseButton" onclick="pauseSorts()" style= "height:35px;position:relative; top: 10px;"/><br>
+			<input type="button" value="Start Sorts" id="startSortsButton" onclick="startSorts()"/>
+			<input type="button" value="Step" id="sortsStepButton" onclick="sortStep()"/>
+			<input type="button" value="Pause" id="pauseButton" onclick="pauseSorts()"/><br>
 			<input type = "radio" name = "testTypeSelect" style="position:relative; top: 25px;" onchange = "swapTestType()" checked>
-			<label style="position:relative; top: 25px;"> Descending Test<label/>
+			<label id="descendingTestLabel"> Descending Test<label/>
 			<input type = "radio" name = "testTypeSelect" style="position:relative; top: 0px;" onchange = "swapTestType()">
-			<label style="position:relative; top: 0px;">Random Test</label><br>
+			<label id="randomTestLabel">Random Test</label><br>
 		
 			<input type = "radio" name = "drawTypeSelect" style="position:relative; top: 15px;" onchange = "swapDrawingType()" checked>
-			<label style="position:relative; top: 15px;"> Dot Drawing<label/>
+			<label id="dotDrawingLabel"> Dot Drawing<label/>
 			<input type = "radio" name = "drawTypeSelect" style="position:relative; top: 0px;" onchange = "swapDrawingType()">
-			<label style="position:relative; top: 0px;"> Line Drawing</label>
+			<label id="lineDrawingLabel"> Line Drawing</label>
 		
 
 			

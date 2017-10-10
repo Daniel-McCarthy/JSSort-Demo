@@ -1,0 +1,180 @@
+body
+{
+	background-color:pink;
+}
+
+#gnomeDiv
+{
+	display: inline-block;
+	min-width: 210px;
+}
+
+#gnomeGraph
+{
+	border-radius: 10px;
+	border: 3px solid #FF90AD;
+}
+
+#selectionDiv
+{
+	display: inline-block;
+	min-width: 210px;
+}
+
+#selectionGraph
+{
+	border-radius: 10px;
+	border: 3px solid #FF90AD;
+}
+
+#insertionDiv
+{
+	display: inline-block;
+	min-width: 210px;"
+}
+
+#insertionGraph
+{
+	border-radius: 10px;
+	border: 3px solid #FF90AD;
+}
+
+#bubbleDiv
+{
+	display: inline-block;
+	min-width: 210px;
+}
+
+#bubbleGraph
+{
+	border-radius: 10px;
+	border: 3px solid #FF90AD;
+}
+
+#combDiv
+{
+	display: inline-block;
+	min-width: 210px;"
+}
+
+#combGraph
+{
+	border-radius: 10px;
+	border: 3px solid #FF90AD;
+}
+
+#shellDiv
+{
+	display: inline-block;
+	min-width: 210px;
+}
+
+#shellGraph
+{
+	border-radius: 10px;
+	border: 3px solid #FF90AD;
+}
+
+#oddEvenDiv
+{
+	display: inline-block;
+	min-width: 210px;
+}
+
+#oddEvenGraph
+{
+	border-radius: 10px;
+	border: 3px solid #FF90AD;
+}
+
+#cocktailDiv
+{
+	display: inline-block;
+	min-width: 210px;
+}
+
+#cocktailGraph
+{
+	border-radius: 10px;
+	border: 3px solid #FF90AD;
+}
+
+#mergeDiv
+{
+	display: inline-block;
+	min-width: 210px;
+}
+
+#mergeGraph
+{
+	border-radius: 10px;
+	border: 3px solid #FF90AD;
+}
+
+#slopeDiv
+{
+	display: inline-block;
+	min-width: 210px;
+}
+
+#slopeGraph
+{
+	 border-radius: 10px;
+	 border: 3px solid #FF90AD;
+}
+
+#foreground
+{
+	text-align: center;
+	margin: 0 auto;
+	width:300px;
+	height:130px;
+	background-color: #FF90AD;
+	border-radius: 25px;
+	border: 3px solid white;
+}
+
+#startSortsButton
+{
+	height:35px;
+	position:relative;
+	top: 10px;
+}
+
+#sortsStepButton
+{
+	height:35px;
+	position:relative;
+	top: 10px;
+}
+
+#pauseButton
+{
+	height:35px;
+	position:relative;
+	top: 10px;
+}
+
+#descendingTestLabel
+{
+	position:relative;
+	top: 25px;
+}
+
+#randomTestLabel
+{
+	position:relative;
+	top: 0px;
+}
+
+#dotDrawingLabel
+{
+	position:relative;
+	top: 15px;
+}
+
+#lineDrawingLabel
+{
+	position:relative;
+	top: 0px;
+}
